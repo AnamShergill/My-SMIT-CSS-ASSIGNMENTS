@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e792f0 0%, #dce3f2 100%);
+  color: #2c2c2c;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  color: #3b2a68;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+  color: #6a6a6a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+}
+
+.assignments-container {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.assignment-card {
+  background: #fff;
+  padding: 2rem 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.assignment-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+  background: rgb(146, 193, 215); /* deeper purple-blue */
+  color: #f0e7ff; /* light text for contrast */
+}
+
+.assignment-card h2 {
+  margin-bottom: 0.8rem;
+  color: #36295f;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.4px;
+}
+
+.assignment-card p {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.assignment-card a {
+  text-decoration: none;
+  padding: 0.65rem 1.3rem;
+  font-size: 1.15em;
+  font-weight: 600;
+  background: linear-gradient(90deg, #6c8cff 0%, #3a54ff 100%);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(58, 84, 255, 0.4);
+  transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.assignment-card a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.assignment-card a:hover {
+  background: linear-gradient(90deg, #4c69ff 0%, #223ecc 100%);
+  box-shadow: 0 8px 20px rgba(34, 62, 204, 0.6);
+  transform: scale(1.05);
+  color: #e1d7ff;
+}
+
+.assignment-card a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.assignment-card .links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.assignment-card .links a {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #4e7efc;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.assignment-card .links a:hover {
+  background-color: #365edc;
+  color: #f0e7ff;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #888;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  user-select: none;
+}
